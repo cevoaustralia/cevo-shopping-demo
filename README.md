@@ -10,22 +10,17 @@ After supplying the data and training the model, the recommendations are then av
 
 For this POC, we will have:
 
-- [fictitious E-Commerce website repo](https://github.com/jaeyow/react-shopping-cart)
+- [fictitious E-Commerce website repo](https://github.com/cevoaustralia/cevo-shopping-demo)
 - with user personas, items and interactions [simulated like what was done here](https://github.com/aws-samples/retail-demo-store).
 
 Here are a list of things we want to find out:
 
 1. Why do we need personalization
-2. How to plug in our own data to it
-3. What recommender recipe to use with what type of problem
-4. How to tune recommendations
-5. How to create campaigns from the AWS Console
-6. How to create campaigns from script
-7. How to do realtime, then batch prediction
-8. How to mix business rules with the predictions
-9. How to handle User cold starts
-10. How to handle Item cold starts
-11. How to integrate with Amazon Pinpoint
+1. How to plug in our own data to it
+1. What recommender recipe to use with what type of problem
+1. How to tune recommendations
+1. How to create campaigns from script
+1. How to handle User cold starts
 
 ```javascript
 /* First, Install the needed packages */
@@ -35,6 +30,10 @@ yarn install
 yarn start
 
 ```
+
+## 1. Why do we need personalization
+
+
 
 ### Copyright and license
 
