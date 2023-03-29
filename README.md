@@ -26,8 +26,6 @@ Here are a list of things we want to find out:
 9. How to handle User cold starts
 10. How to handle Item cold starts
 11. How to integrate with Amazon Pinpoint
-12. How to sell this capability?
-13. ...
 
 ```javascript
 /* First, Install the needed packages */
