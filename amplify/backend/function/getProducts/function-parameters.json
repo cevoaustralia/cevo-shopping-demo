@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "auth": {
+      "cevopersonalize3922fdd3": ["create", "read", "update", "delete"]
+    }
+  },
+  "lambdaLayers": []
+}

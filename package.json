@@ -1,0 +1,120 @@
+{
+  "name": "react-shopping-cart",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@tanstack/react-query": "^4.26.1",
+    "@tanstack/react-query-devtools": "^4.26.1",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.25",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-select": "^5.0.1",
+    "axios": "^0.26.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "^5.0.0",
+    "react-select": "^5.7.0",
+    "styled-components": "^5.3.3",
+    "typescript": "^4.6.3",
+    "zustand": "^4.3.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "firebase deploy",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src --fix",
+    "lint-nofix": "eslint ./",
+    "format": "prettier --write \"**/*.+(ts|tsx|js|json|css)\"",
+    "rimraf-node-modules": "rimraf node_modules"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/index.tsx",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 64,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/semi": [
+        "error",
+        "never"
+      ],
+      "indent": "off",
+      "@typescript-eslint/consistent-type-definitions": [
+        "warn",
+        "type"
+      ],
+      "@typescript-eslint/consistent-type-imports": [
+        "warn",
+        {
+          "prefer": "no-type-imports"
+        }
+      ],
+      "@typescript-eslint/member-delimiter-style": [
+        "error",
+        {
+          "singleline": {
+            "delimiter": "semi"
+          }
+        }
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/styled-components": "^5.1.23",
+    "firebase-tools": "^10.2.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10",
+    "prettier": "^2.5.1"
+  }
+}

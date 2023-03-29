@@ -1,0 +1,14 @@
+[
+  {
+    "Sid": "PersonalizeFullAccess",
+    "Effect": "Allow",
+    "Action": ["personalize:*"],
+    "Resource": ["*"]
+  },
+  {
+    "Sid": "SSMParameterStoreReadOnly",
+    "Action": ["ssm:Describe*", "ssm:Get*", "ssm:List*"],
+    "Effect": "Allow",
+    "Resource": ["*"]
+  }
+]

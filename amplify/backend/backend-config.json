@@ -1,0 +1,121 @@
+{
+  "api": {
+    "products": {
+      "dependsOn": [
+        {
+          "attributes": ["Name", "Arn"],
+          "category": "function",
+          "resourceName": "getProducts"
+        },
+        {
+          "attributes": ["Name", "Arn"],
+          "category": "function",
+          "resourceName": "getCategories"
+        },
+        {
+          "attributes": ["Name", "Arn"],
+          "category": "function",
+          "resourceName": "getUsers"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "cevopersonalize3922fdd3": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": ["SMS"],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": ["EMAIL"],
+        "socialProviders": [],
+        "usernameAttributes": ["EMAIL"],
+        "verificationMechanisms": ["EMAIL"]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "getCategories": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "getProducts": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": ["UserPoolId"],
+          "category": "auth",
+          "resourceName": "cevopersonalize3922fdd3"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "getUsers": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_getCategories_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getCategories"
+        }
+      ]
+    },
+    "AMPLIFY_function_getCategories_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getCategories"
+        }
+      ]
+    },
+    "AMPLIFY_function_getProducts_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getProducts"
+        }
+      ]
+    },
+    "AMPLIFY_function_getProducts_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getProducts"
+        }
+      ]
+    },
+    "AMPLIFY_function_getUsers_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getUsers"
+        }
+      ]
+    },
+    "AMPLIFY_function_getUsers_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getUsers"
+        }
+      ]
+    }
+  }
+}
