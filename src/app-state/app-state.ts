@@ -10,7 +10,7 @@ type AppState = {
   }
 
 export const useStore = create<AppState>()((set) => ({
-    persona: { value: "", label: "" },
+    persona: { value: "none", label: "No shopper selection" },
     setPersona: (value: OptionType | OptionType[] | null) => set((state) => {
         return {
             ...state,
@@ -24,4 +24,4 @@ export const useStore = create<AppState>()((set) => ({
             userId: value
         }
     }),
-}))
+})) 

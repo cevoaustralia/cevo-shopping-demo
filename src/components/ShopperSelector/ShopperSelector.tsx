@@ -7,8 +7,9 @@ import { useShoppers } from "hooks/useShoppers"
 import { OptionType } from "models"
 import * as S from './style'
 
-export const getFilter = (persona: OptionType | OptionType[] | null) => {
-  if (persona && !Array.isArray(persona) && persona.value !== "") {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const getFilter = (persona: any) => {
+  if (isValidPersona(persona)) {
     return [persona.value]
   }
 }
@@ -16,7 +17,7 @@ export const getFilter = (persona: OptionType | OptionType[] | null) => {
 export const isValidPersona = (persona: OptionType | OptionType[] | null) => {
   return persona &&
     !Array.isArray(persona) &&
-    persona.value !== ""
+    persona.value !== "none"
 }
 
 const ShopperSelector: FC = () => {
@@ -57,7 +58,7 @@ const ShopperSelector: FC = () => {
           label: getLabelFromValue(item)
         }})
 
-        personas?.unshift({value: "", label: "No shopper selection"})
+        personas?.unshift({value: "none", label: "No shopper selection"})
         return personas
     }
 
