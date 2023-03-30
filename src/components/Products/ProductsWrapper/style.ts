@@ -38,7 +38,7 @@ export const MainHeader = styled.main`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: end;
-  padding: 25px 0;
+  padding: 25px;
 `
 
 export const Title = styled.div`

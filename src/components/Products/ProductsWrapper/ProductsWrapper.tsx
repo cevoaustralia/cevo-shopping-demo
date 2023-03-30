@@ -55,21 +55,21 @@ const ProductsWrapper: FC<Props> = ({ categories }) => {
         {isFetching && <Loader />}
         <GithubCorner />
         <S.CevoLogo src={logo} alt="Cevo Logo"></S.CevoLogo>
-        <S.TwoColumnGrid>
-          <S.Side>
-            {/* <Filter categoriesFilter={categoriesFilter} setCategoriesFilter={setCategoriesFilter}/> */}
-          </S.Side>
+        <S.OneColumnGrid>
+          {/* <S.Side>
+            <Filter categoriesFilter={categoriesFilter} setCategoriesFilter={setCategoriesFilter}/>
+          </S.Side> */}
           <S.Main>
               <S.Title>E-Commerce (using Amazon Personalize)</S.Title>
               {/* <div>PRODUCTS</div>
               <div><Link to="/categories">CATEGORIES</Link></div> */}
               <S.MainHeader>
-                <p>{getFoundText()}</p>
+                <div>{getFoundText()}</div>
                 <ShopperSelector />
               </S.MainHeader>
               <Products products={data?.length ? data : [] } />
             </S.Main>
-        </S.TwoColumnGrid>
+        </S.OneColumnGrid>
         <Cart />
       </S.Container>
     )
