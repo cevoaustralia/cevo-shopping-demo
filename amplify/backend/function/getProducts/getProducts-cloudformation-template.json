@@ -309,7 +309,7 @@
               "Sid": "PersonalizeFullAccess",
               "Effect": "Allow",
               "Action": [
-                "personalize:*"
+                "personalize:GetRecommendations"
               ],
               "Resource": [
                 "*"
