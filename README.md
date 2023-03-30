@@ -121,6 +121,7 @@ The steps to create our 2 recommenders are:
 </figure>
 <br/>
 <br/>
+
 ## How to test recommendations
 
 We've done this through boto3 SDK calls to the AWS Personalize API, like so:
