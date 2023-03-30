@@ -69,7 +69,7 @@ const ShopperSelector: FC = () => {
         <S.ShopperSelector>
             {isFetching &&  <Loader />}
             <>
-              <div>Select a User Persona:</div>
+              <div>Pick a shopper based on Shopper Persona:</div>
               <S.Selector
                 options={getPersonas()}
                 value={persona}

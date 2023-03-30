@@ -6,7 +6,7 @@ export const OneColumnGrid = styled.main`
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1200px;
-  margin: 50px auto auto;
+  margin: 30px auto auto;
 `
 
 export const TwoColumnGrid = styled.main`
@@ -38,13 +38,12 @@ export const MainHeader = styled.main`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: end;
-  padding: 25px;
+  padding: 15px;
 `
 
 export const Title = styled.div`
   display: flex;
   justify-content: center;
-  padding: 15px;
   font-size: 1.5rem;
   font-style: bold;
 `
@@ -52,7 +51,7 @@ export const Title = styled.div`
 export const CevoLogo = styled.img`
   display: flex;
   justify-content: center;
-  margin: 50px auto;
+  margin: 25px auto;
 `
 
 export const ShopperSelector = styled.div`
