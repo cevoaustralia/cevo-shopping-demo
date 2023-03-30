@@ -1,4 +1,36 @@
 {
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cevopersonalize-main-52745-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590312749310:role/amplify-cevopersonalize-main-52745-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590312749310:role/amplify-cevopersonalize-main-52745-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-cevopersonalize-main-52745-deployment",
+      "UnauthRoleName": "amplify-cevopersonalize-main-52745-unauthRole",
+      "StackName": "amplify-cevopersonalize-main-52745",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:590312749310:stack/amplify-cevopersonalize-main-52745/7004b5d0-cdf2-11ed-8e93-0a4bb6dea19e",
+      "AmplifyAppId": "d2koe94iemyxa2"
+    },
+    "categories": {
+      "auth": {
+        "cevopersonalize3922fdd3": {}
+      },
+      "function": {
+        "getCategories": {
+          "deploymentBucketName": "amplify-cevopersonalize-main-52745-deployment",
+          "s3Key": "amplify-builds/getCategories-506c6f4750716541546c-build.zip"
+        },
+        "getProducts": {
+          "deploymentBucketName": "amplify-cevopersonalize-main-52745-deployment",
+          "s3Key": "amplify-builds/getProducts-5a463341533031467550-build.zip"
+        },
+        "getUsers": {
+          "deploymentBucketName": "amplify-cevopersonalize-main-52745-deployment",
+          "s3Key": "amplify-builds/getUsers-6f53354e32702b784e6c-build.zip"
+        }
+      }
+    }
+  },
   "diane": {
     "awscloudformation": {
       "AuthRoleName": "amplify-cevopersonalize-diane-72138-authRole",
