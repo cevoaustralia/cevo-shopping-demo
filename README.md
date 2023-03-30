@@ -40,9 +40,9 @@ yarn start
 
 This application is a demo of a **fictitious E-Commerce website**. It is not a production quality application, it is for demo and education purposes only. It built inspired by [Retail Demo Store](https://github.com/aws-samples/retail-demo-store), and AWS Samples project built to demonstrate many AWS Service including [AWS Personalize](https://aws.amazon.com/personalize/). I thought of using that repo for this demo, however it had too comprehensive with so many integrations and I thought it was too complicated for my readers to understand the main purpose of this project, which was how to simply start using AWS Personalize from scratch.
 
-The application works with a generated set of user personas, items and interactions. The user personas are used to **simulate different types of users**, and the **interactions** are used to simulate how users interact with the website. The items are the products that are available for sale on the website. 
+The application works with a generated set of shopper personas, items and interactions. The shopper personas are used to **simulate different types of shoppers**, and the **interactions** are used to simulate how shoppers interact with the website. The items are the products that are available for sale on the website. 
 
-As you load the site, it starts with no user persona selected, typical of first time visitors to the site. This is what is being called a **Cold user**, because there will not be any historical interactions, the system will simply display the 'Trending' products. There are simply the most popular products on the site, and they are not personalized to any particular user.
+As you load the site, it starts with no shopper persona selected, typical of first time visitors. This is what is being called a **Cold user**, because there will not be any historical interactions for that shopper, the system will simply display 'Trending' products. There return the most popular products on the site, but they are not personalized to any particular shopper.
 <br/>
 <br/>
 
@@ -52,7 +52,7 @@ As you load the site, it starts with no user persona selected, typical of first 
 <br/>
 <br/>
 
-The above image shows **no user persona** case, because the generated interactions will have user interaction date like views, add to cart, purchase, etc, AWS personalize recommender can use this data to respond back with the trending or popular products. 
+The above image shows when a cold user visits the site, and since the recommender does not have any interaction history for this shopper, it responds back with trending or popular products. 
 
 <br/>
 <br/>
@@ -63,7 +63,7 @@ The above image shows **no user persona** case, because the generated interactio
 <br/>
 <br/>
 
-The above image is of the checkout screen, where it shows the items in the cart, the quantities and total price. The user can also change the quantity of items in the cart, and the total price will be updated accordingly. There is also a checkout button there, however don't worry you won't need a credit card (and you won't get your pizza either).
+The above image is of the checkout screen, where it shows the items in the cart, the quantities and total price. The shopper can also change the quantity of items in the cart, and the total price will be updated accordingly. There is also a checkout button there, however don't worry you won't need a credit card (but you won't get your pizza either).
 
 <br/>
 <br/>
@@ -73,7 +73,7 @@ The above image is of the checkout screen, where it shows the items in the cart,
 <br/>
 <br/>
 
-A shopping persona can be selected, and this will simulate a user that has a particular type of behavior. For example, a user that has a `Apparel, Footwear, Accessories` persona will be more likely to buy clothing items and accessories, and a user that has a `Instruments, Books, Electronics` will be more likely to buy electronics and books. The shopping user persona is used to simulate the type of user that is visiting the site, and the interactions that they will have with the site. This `shopper user id` is then passed to the AWS Personalize service, and the service will return a list of recommended products for that user.
+A shopping persona can be selected, and this will simulate a shopper that has a particular type of behavior. For example, a shopper that has a `Apparel, Footwear, Accessories` persona will be more likely to buy clothing items and accessories, while a shopper that has a `Instruments, Books, Electronics` will be more likely to buy electronics and books. The shopper persona is used to simulate the type of shopper that is visiting the site, and the interactions that they will have with the site. This `shopper user id` is then passed to the AWS Personalize service, and the service will return a list of recommended products for that user.
 
 <br/>
 <br/>
@@ -83,7 +83,7 @@ A shopping persona can be selected, and this will simulate a user that has a par
 <br/>
 <br/>
 
-Further, as you select different shopping personas, you will see that the recommended products will change. This is because the shopping persona is used to simulate the type of user that is visiting the site.
+Further, as you select different shopper personas, you will see that the recommended products will change. This is because the shopping persona is used to pick a shopper interacting with the site.
 
 <br/>
 <br/>
@@ -96,7 +96,7 @@ By providing personalized recommendations, these systems can improve user engage
 
 ## How to plug in our own data to it
 
-This demo project uses a **generated** set of **user personas**, **items** and **interactions**. The user personas are used to simulate different types of users, and the interactions are used to simulate how users interact with the website. The items are the products that are available for sale on the website. Please see this [script that generates users, items and interactions](./generators/generate_interactions_personalize.py). This was adapted from the [Retail Demo Store](https://github.com/aws-samples/retail-demo-store).
+This demo project uses a **generated** set of **user**, **items** and **interactions**. The shopper personas are used to pick users, and the interactions are used to simulate how users interact with the website. The items are the products that are available for sale on the website. Please see this [script that generates users, items and interactions](./generators/generate_interactions_personalize.py). This was adapted from the [Retail Demo Store](https://github.com/aws-samples/retail-demo-store).
 
 ## What recommender recipe to use with what type of problem
 The use case we are trying to solve is a **product recommendation** problem. We want to recommend products to users based on their past interactions with the website. The recipe we want to use for this use case is **E-Commerce**. Here are [more details](https://docs.aws.amazon.com/personalize/latest/dg/ECOMMERCE-items-dataset.html) from AWS Personalize page. 
