@@ -78,7 +78,8 @@ const ShopperSelector: FC = () => {
                   console.log({option})
                   handleChange(option)
                 }}/>
-                {isValidPersona(persona) &&
+                {isValidPersona(persona)
+                ?
                   <>
                     {isShoppersFetching
                     ? 
@@ -91,6 +92,8 @@ const ShopperSelector: FC = () => {
                       </>
                     }
                   </>
+                  :
+                  <>Shopper: No selection</>
                 }
             </>
         </S.ShopperSelector>
