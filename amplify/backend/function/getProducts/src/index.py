@@ -2,9 +2,10 @@ import json
 import yaml
 import boto3
 
+# set this flag accordingly to use recommender or not
+use_recommender = False
 personalizeRuntime = boto3.client("personalize-runtime")
 
-# "products.yaml" is a file in the same directory as this file
 with open("data/products.yaml", "r") as stream:
     data = yaml.safe_load(stream)
 
@@ -58,13 +59,19 @@ def handler(event, context):
 
     if event["queryStringParameters"] is not None:
         if event["queryStringParameters"]["user_id"]:
-            print("Calling 'recommended for you' recommender...")
-            recommended_items = get_recommended_items(
-                event["queryStringParameters"]["user_id"]
-            )
-            filteredData = [item for item in data if item["id"] in recommended_items]
-            filteredData.sort(key=lambda x: recommended_items.index(x["id"]))
-            top_n_data = filteredData
+            if use_recommender:
+                print("Calling 'recommended for you' recommender...")
+                recommended_items = get_recommended_items(
+                    event["queryStringParameters"]["user_id"]
+                )
+                filteredData = [
+                    item for item in data if item["id"] in recommended_items
+                ]
+                filteredData.sort(key=lambda x: recommended_items.index(x["id"]))
+                top_n_data = filteredData
+            else:
+                filteredData = data  # Not using recommender
+                top_n_data = filteredData
         else:
             categoryFilter = event["queryStringParameters"]["filters"]
             filteredData = [x for x in data if x["category"] == categoryFilter]
@@ -73,12 +80,15 @@ def handler(event, context):
             )
             top_n_data = filteredData[:30]
     else:
-        # filteredData = data # Not using recommender
-        print("Calling 'popular items' recommender...")
-        popular_items = get_popular_items()
-        filteredData = [item for item in data if item["id"] in popular_items]
-        filteredData.sort(key=lambda x: popular_items.index(x["id"]))
-        top_n_data = filteredData
+        if use_recommender:
+            print("Calling 'popular items' recommender...")
+            popular_items = get_popular_items()
+            filteredData = [item for item in data if item["id"] in popular_items]
+            filteredData.sort(key=lambda x: popular_items.index(x["id"]))
+            top_n_data = filteredData
+        else:
+            filteredData = data
+            top_n_data = filteredData
 
     return {
         "statusCode": 200,

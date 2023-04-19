@@ -22,7 +22,7 @@
         },
         "getProducts": {
           "deploymentBucketName": "amplify-cevopersonalize-main-52745-deployment",
-          "s3Key": "amplify-builds/getProducts-76534645483767335839-build.zip"
+          "s3Key": "amplify-builds/getProducts-4c542b6c4c6969633646-build.zip"
         },
         "getUsers": {
           "deploymentBucketName": "amplify-cevopersonalize-main-52745-deployment",

@@ -2,7 +2,6 @@ import json
 import yaml
 import random
 
-# "categories.yaml" is a file in the same directory as this file
 with open("data/categories.yaml", "r") as stream:
     data = yaml.safe_load(stream)
 

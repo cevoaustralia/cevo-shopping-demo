@@ -20,7 +20,7 @@ def handler(event, context):
                 personaFilter = event["pathParameters"]["proxy"].split("/")[1]
                 filteredData = [x for x in data if x["persona"] == personaFilter]
             else:
-                # /persona only, return all personas types here
+                # /persona only, return all persona types here
                 filteredData = {x["persona"]: x for x in data}.values()
                 filteredData = [x["persona"] for x in list(filteredData)]
         else:
