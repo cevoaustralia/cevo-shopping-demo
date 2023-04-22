@@ -1,10 +1,10 @@
-## POC for a Recommendation Engine using Amazon Personalize
+## Shopping App + Amazon Personalize
 
 [Amazon Personalize](https://aws.amazon.com/personalize/) is a fully managed machine learning service (Recommendation Engine) that uses your data to generate item recommendations for your users. It can also generate user segments based on the users' affinity for certain items or item metadata.
 
 Building **Recommendation Systems** is hard to do well, let Amazon do the heavy lifting for you.
 
-For this POC, we will have:
+For this application, we will have:
 
 - [fictitious E-Commerce website repo](https://github.com/cevoaustralia/cevo-shopping-demo)
 - with user personas, items and interactions [simulated like what was done here](https://github.com/aws-samples/retail-demo-store).
