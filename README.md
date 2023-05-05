@@ -1,5 +1,9 @@
 ## Shopping App + Amazon Personalize
 
+Blog Posts: 
+- [Cevo Australia - Tech Insights](https://cevo.com.au/post/build-recommender-systems-the-easy-way-in-aws/)
+- [Full Stack Developer Tips](https://fullstackdeveloper.tips/build-recommender-systems-the-easy-way-in-aws/)
+
 [Amazon Personalize](https://aws.amazon.com/personalize/) is a fully managed machine learning service (Recommendation Engine) that uses your data to generate item recommendations for your users. It can also generate user segments based on the users' affinity for certain items or item metadata.
 
 Building **Recommendation Systems** is hard to do well, let Amazon do the heavy lifting for you.
