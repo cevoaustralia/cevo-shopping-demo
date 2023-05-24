@@ -1,6 +1,7 @@
 import json
 import yaml
-import random
+
+# we can add more imports here if we need to
 
 with open("data/categories.yaml", "r") as stream:
     data = yaml.safe_load(stream)

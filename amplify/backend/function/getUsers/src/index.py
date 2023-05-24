@@ -1,6 +1,8 @@
 import json
 import gzip
 
+# we can add more imports here if we need to
+
 with gzip.open("data/users.json.gz", mode="rt") as f:
     data = json.loads(f.read())
 
