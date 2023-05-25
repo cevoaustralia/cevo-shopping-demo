@@ -18,15 +18,15 @@
       "function": {
         "getCategories": {
           "deploymentBucketName": "amplify-cevopersonalize-charity-71536-deployment",
-          "s3Key": "amplify-builds/getCategories-6d6a59756d5a4930565a-build.zip"
+          "s3Key": "amplify-builds/getCategories-73754d564e4b38574a5a-build.zip"
         },
         "getProducts": {
           "deploymentBucketName": "amplify-cevopersonalize-charity-71536-deployment",
-          "s3Key": "amplify-builds/getProducts-57634c4c4370536e4176-build.zip"
+          "s3Key": "amplify-builds/getProducts-49513141584a42716969-build.zip"
         },
         "getUsers": {
           "deploymentBucketName": "amplify-cevopersonalize-charity-71536-deployment",
-          "s3Key": "amplify-builds/getUsers-5631736c304a6531576f-build.zip"
+          "s3Key": "amplify-builds/getUsers-594c3552397954446d44-build.zip"
         }
       },
       "api": {
