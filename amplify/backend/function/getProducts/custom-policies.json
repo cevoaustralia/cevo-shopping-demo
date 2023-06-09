@@ -10,5 +10,11 @@
     "Action": ["ssm:Describe*", "ssm:Get*", "ssm:List*"],
     "Effect": "Allow",
     "Resource": ["*"]
+  },
+  {
+    "Sid": "S3ReadOnly",
+    "Action": ["s3:GetObject"],
+    "Effect": "Allow",
+    "Resource": ["*"]
   }
 ]

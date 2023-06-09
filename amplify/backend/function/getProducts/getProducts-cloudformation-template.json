@@ -86,10 +86,7 @@
           ]
         },
         "Runtime": "python3.9",
-        "Layers": [
-          "arn:aws:lambda:ap-southeast-2:590312749310:layer:Numpy_Py39:3",
-          "arn:aws:lambda:ap-southeast-2:590312749310:layer:Pandas_Py39:1"
-        ],
+        "Layers": [],
         "Timeout": 25
       }
     },
@@ -324,6 +321,16 @@
                 "ssm:Describe*",
                 "ssm:Get*",
                 "ssm:List*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "*"
+              ]
+            },
+            {
+              "Sid": "S3ReadOnly",
+              "Action": [
+                "s3:GetObject"
               ],
               "Effect": "Allow",
               "Resource": [

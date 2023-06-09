@@ -18,11 +18,11 @@
       "function": {
         "getCategories": {
           "deploymentBucketName": "amplify-cevopersonalize-marcia-13720-deployment",
-          "s3Key": "amplify-builds/getCategories-4e6277715770456f494e-build.zip"
+          "s3Key": "amplify-builds/getCategories-584c6c466e342f583465-build.zip"
         },
         "getProducts": {
           "deploymentBucketName": "amplify-cevopersonalize-marcia-13720-deployment",
-          "s3Key": "amplify-builds/getProducts-6b6e544f4b7463414569-build.zip"
+          "s3Key": "amplify-builds/getProducts-776c54624c79794d4751-build.zip"
         },
         "getUsers": {
           "deploymentBucketName": "amplify-cevopersonalize-marcia-13720-deployment",
