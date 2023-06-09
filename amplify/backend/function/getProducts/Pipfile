@@ -7,8 +7,6 @@ verify_ssl = true
 
 [packages]
 src = {editable = true, path = "./src"}
-numpy = "*"
-pandas = "*"
 pyyaml = "*"
 
 [requires]
