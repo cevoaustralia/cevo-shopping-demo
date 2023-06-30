@@ -1,13 +1,6 @@
 {
   "version": 1,
   "paths": {
-    "/products": {
-      "name": "/products",
-      "lambdaFunction": "getProducts",
-      "permissions": {
-        "setting": "open"
-      }
-    },
     "/categories": {
       "name": "/categories",
       "lambdaFunction": "getCategories",
