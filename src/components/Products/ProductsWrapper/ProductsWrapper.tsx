@@ -60,7 +60,7 @@ const ProductsWrapper: FC<Props> = ({ categories }) => {
             <Filter categoriesFilter={categoriesFilter} setCategoriesFilter={setCategoriesFilter}/>
           </S.Side> */}
           <S.Main>
-              <S.Title>E-Commerce (using Amazon Personalize)</S.Title>
+              <S.Title>E-Commerce (using Matix Factorization Recommender)</S.Title>
               {/* <div>PRODUCTS</div>
               <div><Link to="/categories">CATEGORIES</Link></div> */}
               <S.MainHeader>
